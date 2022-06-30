@@ -13,5 +13,6 @@ public interface AppUserService {
     public Role saveRole(Role role);
     public void  addAppUserRole(String email, String roleName) throws AppUserException, RoleNotFoundException;
     public Optional<AppUser> getAppUser(String email);
+    public Optional<AppUser> getAppUserByUsernameOrEmail(String query);
     public List<AppUser> getAllAppUser();
 }

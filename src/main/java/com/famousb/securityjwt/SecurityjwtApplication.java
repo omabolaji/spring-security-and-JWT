@@ -21,7 +21,7 @@ public class SecurityjwtApplication {
 
 	@Bean
 	PasswordEncoder passwordEncoder(){
-		return new BCryptPasswordEncoder() ;
+		return new BCryptPasswordEncoder();
 	}
 
 	@Bean
@@ -32,10 +32,10 @@ public class SecurityjwtApplication {
 			appUserService.saveRole(new Role(null, "SUPER_ADMIN"));
 			appUserService.saveRole(new Role(null, "AGENT"));
 
-			appUserService.saveUser(new AppUser(null, "Test", "test@gmail.com", "test@2020", new ArrayList<>()));
-			appUserService.saveUser(new AppUser(null, "Bola", "bola@gmail.com", "bola@2020", new ArrayList<>()));
-			appUserService.saveUser(new AppUser(null, "Kola", "kola@gmail.com", "kola@2020", new ArrayList<>()));
-			appUserService.saveUser(new AppUser(null, "Ade", "ade@gmail.com", "ade@2020", new ArrayList<>()));
+			appUserService.saveUser(new AppUser(null, "Test", "test@gmail.com", "123456","test@2020", new ArrayList<>()));
+			appUserService.saveUser(new AppUser(null, "Bola", "bola@gmail.com","123456", "bola@2020", new ArrayList<>()));
+			appUserService.saveUser(new AppUser(null, "Kola", "kola@gmail.com","123456", "kola@2020", new ArrayList<>()));
+			appUserService.saveUser(new AppUser(null, "Ade", "ade@gmail.com","123456", "ade@2020", new ArrayList<>()));
 
 			appUserService.addAppUserRole("test@gmail.com", "ROLE_USER");
 			appUserService.addAppUserRole("test@gmail.com", "ADMIN");

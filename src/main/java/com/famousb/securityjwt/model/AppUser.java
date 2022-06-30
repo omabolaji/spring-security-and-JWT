@@ -7,6 +7,7 @@ import org.hibernate.annotations.Fetch;
 import org.springframework.data.repository.cdi.Eager;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,6 +24,8 @@ public class AppUser {
     private String name;
     @NotNull
     private String email;
+    @NotNull
+    private String password;
     @NotNull
     private String username;
     @ManyToMany(fetch = FetchType.EAGER)
